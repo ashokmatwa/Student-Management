@@ -35,7 +35,7 @@ public class StudentController {
     public ResponseEntity updateStudent(@RequestParam("u") int admNo, @RequestParam("ag") int age){
         String response = studentService.updateStudent(admNo, age);
         if(response==null) {
-            return new ResponseEntity<>("INVALID request", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("INVALID request", HttpStatus.CREATED);
         }
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
