@@ -33,7 +33,7 @@ public class StudentRepository {
     public String updateStudent(int id, int age){
 
         if(!db.containsKey(id))
-            return "Student Not Found !!!";
+            return null;
 
 //        Student student = db.get(admNo); // get the student corresponds to admNo
 //        student.setAge(age);
